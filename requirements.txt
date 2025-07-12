@@ -1,0 +1,26 @@
+# Core data processing and scientific computing
+numpy==2.1.3
+pandas==2.2.3
+scipy==1.15.3
+
+# Machine learning and statistical analysis
+scikit-learn==1.6.1
+
+# Data visualization
+matplotlib==3.10.3
+seaborn==0.13.2
+plotly==6.0.1
+
+# Data serialization and model persistence
+joblib==1.5.0
+
+# Excel file handling
+openpyxl==3.1.5
+
+# Interactive dashboard framework
+dash==3.0.4
+
+# Development environment (optional - for Jupyter notebooks)
+jupyter==1.1.1
+notebook==7.4.2
+ipykernel==6.29.5

@@ -205,3 +205,289 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# Intermediate documents
+*.dvi
+*.xdv
+*-converted-to.*
+
+# These rules might exclude image files for figures etc.
+# *.ps
+# *.eps
+# *.pdf
+
+# LaTeX Beamer
+*.nav
+*.pre
+*.snm
+*.vrb
+
+# Bibliography files
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Build tool files
+*.bak
+*.swp
+*.tmp
+
+# Glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.lzo
+*.lzs
+
+# Uncomment this if you use the glossaries package and want to ignore the makeindex files
+# *.ist
+
+# Hyperref
+*.xref
+
+# knitr
+*-concordance.tex
+# TODO Comment the next line if you want to keep your tikz graphics files
+*.makefile
+*.fls
+*.figlist
+
+# listings
+*.lol
+
+# makeidx
+*.idx
+*.ilg
+*.ind
+
+# minitoc
+*.maf
+*.mlf
+*.mlt
+*.mtc[0-9]*
+*.slf[0-9]*
+*.slt[0-9]*
+*.stc[0-9]*
+
+# minted
+_minted*
+*.pyg
+
+# morewrites
+*.mw
+
+# nomencl
+*.nlg
+*.nlo
+*.nls
+
+# pax
+*.pax
+
+# pdfpcnotes
+*.pdfpc
+
+# sagetex
+*.sagetex.sage
+*.sagetex.py
+*.sagetex.scmd
+
+# scrwfile
+*.wrt
+
+# sympy
+*.sout
+*.sympy
+sympy-plots-for-*.tex/
+
+# pdfcomment
+*.upa
+*.upb
+
+# pythontex
+*.pytxcode
+pythontex-files-*/
+
+# tcolorbox
+*.listing
+
+# thmtools
+*.thm
+
+# TikZ & PGF
+*.auxlock
+*.figlist
+*.makefile
+*.fls
+
+# todonotes
+*.tdo
+
+# vhistory
+*.hst
+*.ver
+
+# easy-todo
+*.lod
+
+# xcolor
+*.xcp
+
+# xmpincl
+*.xmpi
+
+# xindy
+*.xdy
+
+# xypic precompiled matrices and outlines
+*.xyc
+*.xyd
+
+# endfloat
+*.ttt
+*.fff
+
+# Latexian
+TSWLatexianTemp*
+
+# Texpad
+.texpadtmp
+
+# LyX
+*.lyx~
+
+# Kile
+*.backup
+
+# gummi
+.*.swp
+
+# KBibTeX
+*~[0-9]*
+
+# TeXnicCenter
+*.tps
+
+# auto folder when using emacs and auctex
+./auto/*
+*.el
+
+# expex forward references with \gathertags
+*-tags.tex
+
+# fdb_latexmk
+*.fdb_latexmk
+
+# morewrites
+*.mw
+
+# mylatexformat
+*.fmt
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.tmp
+*.temp
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Temporary files
+*.tmp
+*.temp
+
+# Editor files
+.*.swp
+.*.swo
+*~
+
+# Output files (uncomment if you don't want to track PDFs)
+# *.pdf
+
+# Specific to your project - figures cache
+figures/cache/
+*.figcache
+
+# Python cache (if using Python scripts for figures)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# R files (if using R for analysis/figures)
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+
+# MATLAB files (if using MATLAB for analysis/figures)
+*.asv
+*.m~
+
+# Jupyter notebook checkpoints (if using notebooks)
+.ipynb_checkpoints
+
+# Data files (be careful with this - you might want to track some data)
+# *.csv
+# *.xlsx
+# *.mat
+# *.pkl
+
+# Large binary files
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+# *.tiff
+# *.bmp
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z

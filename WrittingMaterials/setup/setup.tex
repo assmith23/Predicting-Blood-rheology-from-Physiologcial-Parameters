@@ -1,0 +1,155 @@
+\documentclass[12pt,letterpaper]{article}
+
+% Essential packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{multicol}
+
+% Page layout and formatting
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% References and citations
+\usepackage[style=numeric,backend=bibtex,sorting=none]{biblatex}
+\addbibresource{references.bib} % Create this file for your references
+
+% Table of contents formatting
+\usepackage{tocloft}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=blue
+}
+
+% Figure and table numbering
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+% Custom formatting for captions
+\captionsetup{
+    font=small,
+    labelfont=bf,
+    format=plain,
+    justification=centering,
+    margin=0.5cm
+}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lhead{Transient Blood Rheology}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Title formatting
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection}{1em}{}
+
+% Line spacing
+\onehalfspacing
+
+\begin{document}
+
+% Title page
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\LARGE\bfseries Main Title Here\par}
+    
+    \vspace{1.5cm}
+    
+    {\large A Machine Learning Approach to Correlating Physiological Parameters with Rheological Features\par}
+    
+    \vspace{2cm}
+    
+    {\Large A Manning Smith\par}
+    \vspace{0.5cm}
+    {\large University of Delaware\par}
+    {\large Bioinformatics and Computation Science\par}
+    
+    \vspace{2cm}
+    
+    {\large \today\par}
+    
+    \vfill
+    
+    \begin{abstract}
+    \noindent
+    Abstract goes here
+    \end{abstract}
+    
+\end{titlepage}
+
+% Table of contents
+\newpage
+\tableofcontents
+
+% Introduction
+\newpage
+\section{Introduction}
+Intro section here.
+
+% Methods
+\newpage
+\section{Methods}
+Methods section here.
+
+% Results and Discussion
+\newpage
+\section{Results and Discussion}
+Results and discussion section here.
+
+% Future Directions
+\newpage
+\section{Future Directions}
+Future directions section here.
+
+% Conslusions
+\newpage
+\section{Conclusion}
+Conclusion section here.
+
+% Acknowledgments
+\newpage
+\section{Acknowledgments}
+
+- Sean Farrington
+- Norman J. Wagner
+
+% Resources
+\newpage
+\section{Resources}
+Resources section here.
+
+
+% References
+\newpage
+\printbibliography[title=References]
+
+% Appendices (if needed)
+\newpage
+\appendix
+
+\section{Supplementary Data}
+\label{app:supplementary}
+
+[Include supplementary figures, tables, or data here]
+
+\end{document}

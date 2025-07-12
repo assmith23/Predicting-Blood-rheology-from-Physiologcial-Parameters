@@ -15,7 +15,6 @@ import joblib
 abrSubset = ['donors', 'HCT', 'FIB', 'CHOL', 'TRIG', 'HDL', 'LDL', 'WBC', 'RBC', 'HEM', 'MCV', 'MCH', 'MCHC']
 rheo_targets = ["MU_0", "MU_INF", "TAU_C", "T_R1", "T_R2", "MU_R", "SIGMA_Y0", "TAU_LAM", "G_R", "G_C"]
 
-
 def get_fp(cpu="man_dtop", dataFolder="DATA", figuresFolder=""):
     if (cpu == "man_dtop"):
         data_fp = r"/home/msmitty/Documents/TransientBloodRheo_ML/DATA/"

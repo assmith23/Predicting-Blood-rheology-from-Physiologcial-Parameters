@@ -1,0 +1,170 @@
+{
+    "donors": {
+        "column_name": "donors",
+        "abbreviation": "Donor",
+        "unit": null,
+        "usage": "NA"
+    },
+    "Hematocrit": {
+        "column_name": "Hematocrit (%)",
+        "abbreviation": "HCT",
+        "unit": "%",
+        "usage": "NA"
+    },
+    "Fibrinogen": {
+        "column_name": "Fibrinogen (mg/dL)",
+        "abbreviation": "FIB",
+        "unit": "mg/dL",
+        "usage": "NA"
+    },
+    "Total_Cholesterol": {
+        "column_name": "Total Cholesterol (mg/dL)",
+        "abbreviation": "CHOL",
+        "unit": "mg/dL",
+        "usage": "NA"
+    },
+    "Triglycerides": {
+        "column_name": "Triglycerides (mg/dL)",
+        "abbreviation": "TRIG",
+        "unit": "mg/dL",
+        "usage": "NA"
+    },
+    "HDL_Cholesterol": {
+        "column_name": "HDL Cholesterol (mg/dL)",
+        "abbreviation": "HDL",
+        "unit": "mg/dL",
+        "usage": "NA"
+    },
+    "LDL_Cholesterol": {
+        "column_name": "LDL Cholesterol (mg/dL)",
+        "abbreviation": "LDL",
+        "unit": "mg/dL",
+        "usage": "NA"
+    },
+    "White_Blood_Cell_Count": {
+        "column_name": "White Blood Cell Count (Thousand/uL)",
+        "abbreviation": "WBC",
+        "unit": "Thousand/uL",
+        "usage": "NA"
+    },
+    "Red_Blood_Cell_Count": {
+        "column_name": "Red Blood Cell Count (Million/uL)",
+        "abbreviation": "RBC",
+        "unit": "Million/uL",
+        "usage": "NA"
+    },
+    "Hemoglobin": {
+        "column_name": "Hemoglobin (g/dL)",
+        "abbreviation": "HEM",
+        "unit": "g/dL",
+        "usage": "NA"
+    },
+    "MCV": {
+        "column_name": "MCV (fL)",
+        "abbreviation": "MCV",
+        "unit": "fL",
+        "usage": "NA"
+    },
+    "MCH": {
+        "column_name": "MCH (pg/cell)",
+        "abbreviation": "MCH",
+        "unit": "pg/cell",
+        "usage": "NA"
+    },
+    "MCHC": {
+        "column_name": "MCHC (g/dL)",
+        "abbreviation": "MCHC",
+        "unit": "g/dL",
+        "usage": "NA"
+    },
+    "RDW": {
+        "column_name": "RDW (%)",
+        "abbreviation": "RDW",
+        "unit": "%",
+        "usage": "NA"
+    },
+    "Platelet_Count": {
+        "column_name": "Platelet Count (Thousand/uL)",
+        "abbreviation": "PLAT",
+        "unit": "Thousand/uL",
+        "usage": "NA"
+    },
+    "MPV": {
+        "column_name": "MPV (fL)",
+        "abbreviation": "MPV",
+        "unit": "fL",
+        "usage": "NA"
+    },
+    "Absolute_Neutrophils": {
+        "column_name": "Absolute Neutrophils (cells/uL)",
+        "abbreviation": "NEUTABS",
+        "unit": "cells/uL",
+        "usage": "NA"
+    },
+    "Absolute_Lymphocytes": {
+        "column_name": "Absolute Lymphocytes (cells/uL)",
+        "abbreviation": "LYMPABS",
+        "unit": "cells/uL",
+        "usage": "NA"
+    },
+    "Absolute_Monocytes": {
+        "column_name": "Absolute Monocytes (cells/uL)",
+        "abbreviation": "MONOABS",
+        "unit": "cells/uL",
+        "usage": "NA"
+    },
+    "Absolute_Eosinophils": {
+        "column_name": "Absolute Eosinophils (cells/uL)",
+        "abbreviation": "EOSIABS",
+        "unit": "cells/uL",
+        "usage": "NA"
+    },
+    "Absolute_Basophils": {
+        "column_name": "Absolute Basophils (cells/uL)",
+        "abbreviation": "BASOABS",
+        "unit": "cells/uL",
+        "usage": "NA"
+    },
+    "Neutrophils": {
+        "column_name": "Neutrophils (%)",
+        "abbreviation": "NEUT",
+        "unit": "%",
+        "usage": "NA"
+    },
+    "Lymphocytes": {
+        "column_name": "Lymphocytes (%)",
+        "abbreviation": "LYMP",
+        "unit": "%",
+        "usage": "NA"
+    },
+    "Monocytes": {
+        "column_name": "Monocytes (%)",
+        "abbreviation": "MONO",
+        "unit": "%",
+        "usage": "NA"
+    },
+    "Eosinophils": {
+        "column_name": "Eosinophils (%)",
+        "abbreviation": "EOSI",
+        "unit": "%",
+        "usage": "NA"
+    },
+    "Basophils": {
+        "column_name": "Basophils (%)",
+        "abbreviation": "BASO",
+        "unit": "%",
+        "usage": "NA"
+    },
+    "Age": {
+        "column_name": "Age (years)",
+        "abbreviation": "AGE",
+        "unit": "years",
+        "usage": "NA"
+    },
+    "Sex": {
+        "column_name": "Sex",
+        "abbreviation": "SEX",
+        "unit": null,
+        "usage": "NA"
+    }
+}

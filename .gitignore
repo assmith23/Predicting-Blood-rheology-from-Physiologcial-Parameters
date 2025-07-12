@@ -219,6 +219,7 @@ __marimo__/
 *.cb
 *.cb2
 .*.lb
+*.gz
 
 # Intermediate documents
 *.dvi
@@ -491,4 +492,3 @@ __pycache__/
 *.tar.gz
 *.rar
 *.7z
-WrittingMaterials/setup/setup.synctex.gz

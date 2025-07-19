@@ -141,9 +141,31 @@ $$
     C = \frac{1}{n-1} \mathbf{X}^T\mathbf{X}
 $$
 where $\mathbf{X}$ is the standardized data matrix. The principal components are the eigenvectors of $\mathbf{C}$, and the explained variance for each component corresponds to
-its eigenvalue. For the purposes of this research the following 13 features were selected: 'HCT', 'FIB', 'CHOL', 'TRIG', 'HDL', 'LDL', 'WBC', 'RBC', 'HEM', 'MCV', 'MCH', 'MCHC'.
+its eigenvalue. For the purposes of this research the following 13 features were selected outlined in table XX.
 
-The analysis focused primarily on the first 8 components, which captured the majority of physiological variation while maintaining sufficient sample-to-feature ratios for
+\begin{table}[]
+    \centering
+    \caption{Physiological targets used for the transient rheology parameterization.}
+    \begin{tabular}{lcc}
+        Physiology                                & Code & Units \\
+        \hline
+        Hematocrit                                & HCT  & $\%$ \\
+        Fibrinogen                                & FIB  & $mg/dL$ \\
+        Total Cholesterol                         & CHOL & $mg/dL$ \\
+        Triglycerides                             & TRIG & $mg/dL$ \\
+        HDL Cholesterol                           & HDL  & $mg/dL$ \\
+        LDL Cholesterol                           & LDL  & $mg/dL$ \\
+        White Blood Cell Count                    & WBC  & $\text{thousand}/\mu L$ \\
+        Red Blood Cell Count                      & RBC  & $\text{million}/\mu L$ \\
+        Hemoglobin                                & HEM  & $g/dL$ \\
+        Mean Corpuscular Volume                   & MCV  & $fL$ \\
+        Mean Corpuscular Hemoglobin               & MCH  & $pg/cell$ \\
+        Mean Corpuscular Hemoglobin Concentration & MCHC & $g/dL$
+    \end{tabular}
+    \label{need label}
+\end{table}
+
+The analysis focused primarily on the first 3 components, which captured the majority of physiological variation while maintaining sufficient sample-to-feature ratios for
 robust statistical analysis. Principal component loadings were examined to identify which physiological variables contributed most strongly to each component, enabling biological
 interpretation of the reduced feature space.
 
@@ -224,8 +246,87 @@ and addressing the inherent challenges of working with limited sample sizes in c
 
 % Results and Discussion
 \newpage
-\section{Results and Discussion}
-Results and discussion section here.
+\section{Results}
+Analysis of the 22-donor dataset revealed distinct patterns in the relationships between physiological blood parameters and rheological constitutive model parameters,
+with machine learning approaches successfully identifying key physiological predictors for several rheological variables.
+
+To address the missing values in the rheological dataset, KNN imputation was employed, resulting in a complete dataset with no missing values. There were
+5 observations with missing values in the rheological dataset, which were imputed. These missing values were non-random but due to data collection issues.
+The transient measure with missing values are seen in table XX.
+
+\begin{table}[]
+    \centering
+    \caption{Physiological targets used for the transient rheology parameterization.}
+    \begin{tabular}{lcc}
+        Transient Description                              & Parameter & Units \\
+        \hline
+        Overall reouleaux rebuild time constant            & $\tau_{\lambda}$  & $s$ \\
+        Rouleaux elastic modulus                           & $G_R$  & Pa \\
+        RBCs elastic modulus                               & $G_C$ & Pa
+    \end{tabular}
+    \label{need label}
+\end{table}
+
+The imputation process preserved the overall distribution of the rheological parameters while filling in gaps, allowing for subsequent analysis without introducing
+significant bias. The imputed distribution of $\tau_{\lambda}$ and $G_R$, decreased the mean and standard deviation slightly (Figure s1001). With imputed distribution of $G_C$ the mean
+and standard deviation decreased as well, but added much more right skew to the distribution with multiple outliers in the top $25\%$ of the data. (Figure s1002).
+
+The first two components explained $\approx 52\%$ of the variance in the data, with PC1 explaining $\approx 31\%$ and PC2 explaining $~21\%$ (figure s2004).
+The first three components explained $\approx 67\%$ of the variance in the data, with PC3 explaining $\approx 15\%$ of the variance (figure s003). The first three components
+were selected for further analysis as they captured the majority of physiological variation while maintaining sufficient sample-to-feature ratios for robust statistical analysis.
+Principal component loadings were examined to identify which physiological variables contributed most strongly to each component, enabling biological interpretation of the reduced feature space.
+
+With the first two principal components capturing over half of the physiological variation in the dataset, it is essential to understand how the original 13 blood panel variables contribute to
+these components and reveals the relationships between individual donors in the transformed PC space. There are three main groups of variables that contribute to the first two principal components.
+The first group includes Hematocrit (HCT), Hemoglobin (HEM), and Red Blood Cell Count (RBC), contribute significantly to PC1 in the positive direction. The second group includes Cholesterol (CHOL),
+LDL Cholesterol (LDL), and Mean Corpuscular Hemoglobin Concentration (MCHC), contribute positively in the PC2 and virtually no contributions in PC1 due to the high vertical line.
+Lastly the third group includes MCH, MCV, and HDL Cholesterol (HDL), which are strongly correlated with PC2 contributing negatively in PC1 and positively in PC2. The remaining variables, Fibrinogen (FIB),
+Triglycerides (TRIG), and White Blood Cell Count (WBC), have weaker contributions to the principal components, indicating that they may not be as strongly associated with the overall physiological variation
+captured by the first two components. (figure s2004) There are no clear clusters in the PC space, indicating that the physiological variables do not strongly separate the donors into distinct groups based
+on their blood panel results.
+
+The principal components' correlation to physiological parameters are described by a coefficient of a feature importance, represented by a value of $-1$ to $1$. It was found that Hematocrit (HCT),
+was most correlated to PC1 and Fibrinogen (FIB) was most correlated to PC3 (figure s2005). Similar to that of the biplot, the correlations between the variables and the principal components are seen clustered into
+groups. The first group includes Hematocrit (HCT), Hemoglobin (HEM), and Red Blood Cell Count (RBC), which are all positively correlated with PC1. The second group includes Cholesterol (CHOL), LDL Cholesterol (LDL),
+and Mean Corpuscular Hemoglobin Concentration (MCHC), which contribute positively in the PC2.(figure s2005)
+
+Some basic biological interpretation of the principal components can be made based on the loadings of the physiological variables. For example, the strong loading of Hematocrit (HCT) on PC1 suggests
+in conjunction with Hemoglobin (HEM) and Red Blood Cell Count (RBC) that this component captures variations in red blood cell concentration and overall blood viscosity.
+Similarly, the loading of Fibrinogen (FIB) on PC3 indicates that this component may be associated with the inflammatory response and clotting dynamics in the blood. Overall, these interpretations provide
+valuable insights into the underlying biological processes that drive the observed rheological behavior in the blood samples.
+
+Utilizing the principal components as features, correlational coefficients were calculated between the principal components and the rheological parameters. The most significant correlations were found between
+were between PC2 and $\mu_0$ and PC5 and $\sigma_{\gamma^O}$, with correlation coefficients of $0.478$ and $0.459$, respectively (figure s4007). The correlation coefficients between the principal components
+and the rheological parameters are generally low, indicating that the principal components do not strongly predict the rheological parameters.
+
+One rheological parameter that was correlated to PC 2 was the zero shear viscosity ($\mu_0$), which is a measure of the viscosity of the blood at low shear rates. To understand this correlation between the data was plotted to show
+this correlation (figure ). There is an outlier for observation S. 15 observations were within the 95\% confidence interval. The correlation coefficient of $r=0.478$ suggests that there is moderate positive correlation between these values.
+With $\mu_0$ showing a correlation with PC2 that means that physiological parameters correlated to PC2 may also be correlated to $\mu_0$. The correlation between the physiological variables and $\mu_0$ were plotted show
+consistency in the results, as what would be expected (figure ). The individual variables have a low positive correlation with $\mu_0$ (figure ), but when combined the results resemble that of the plot with PC2 vs $\mu_0$.
+
+The results from the k-fold cross validation signified limited strength in the validity of the Gaussian Process Regression model (figure s4011). The $R^2_{CV}$ metric resulted in negative values indicating that the model performs worse
+than simply predicting the mean. There is no strength of evidence to suggest a connection between the physiological parameters and the rheological parameters; moreover, the converse can not be assumed that there is not a connection.
+Further investigation in specific variables may have more influence than the selected.
+
+Synthetic data results....
+
+
+
+
+
+
+
+
+
+
+
+
+% Discussion
+\newpage
+\section{Discussion}
+Discussion section here.
+
+
 
 % Future Directions
 \newpage
@@ -269,7 +370,7 @@ Resources section here.
 
 % References
 \newpage
-\printbibliography[title=References]
+%\printbibliography[title=References]
 
 % Appendices (if needed)
 \newpage

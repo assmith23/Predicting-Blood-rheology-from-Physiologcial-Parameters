@@ -40,6 +40,9 @@
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
+% Figure Filepath
+\graphicspath{{WritingMaterials/0.Figures/}}
+
 % Custom formatting for captions
 \captionsetup{
     font=small,
@@ -270,6 +273,13 @@ The transient measure with missing values are seen in table XX.
 The imputation process preserved the overall distribution of the rheological parameters while filling in gaps, allowing for subsequent analysis without introducing
 significant bias. The imputed distribution of $\tau_{\lambda}$ and $G_R$, decreased the mean and standard deviation slightly (Figure s1001). With imputed distribution of $G_C$ the mean
 and standard deviation decreased as well, but added much more right skew to the distribution with multiple outliers in the top $25\%$ of the data. (Figure s1002).
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{s1_001_distributions.png}
+    \caption{ADD CAPTION!}
+    \label{fig:s1001}
+\end{figure}
 
 The first two components explained $\approx 52\%$ of the variance in the data, with PC1 explaining $\approx 31\%$ and PC2 explaining $~21\%$ (figure s2004).
 The first three components explained $\approx 67\%$ of the variance in the data, with PC3 explaining $\approx 15\%$ of the variance (figure s003). The first three components

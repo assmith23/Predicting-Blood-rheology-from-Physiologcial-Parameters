@@ -369,7 +369,42 @@ Further investigation in specific variables may have more influence than the sel
     \label{fig:s4011}
 \end{figure}
 
-Synthetic data results....
+
+Synthetic data generation was employed as a critical strategy to address the fundamental challenge posed by the limited sample size ($n=22$)
+relative to the high-dimensional feature space in this study. 
+
+The analysis identifies $n\approx 75$ as a critical threshold where diminishing returns in model performance become apparent (Figure \ref{fig:s5012}).
+Beyond this sample size, most well-performing parameters show only marginal improvements, indicating that the models have effectively
+learned the underlying relationships between physiological variables and rheological behavior. This finding provides crucial guidance for
+future experimental design, suggesting that studies requiring similar predictive accuracy should target sample sizes in the $75-100$ range.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{/home/msmitty/Documents/TransientBloodRheo_summerExperience/WritingMaterials/0.Figures/s5_012_knnSynthetic.png}
+    \caption{Cross-validation performance ($R^2$) of machine learning models predicting rheological parameters as a function of
+    synthetic dataset size. Each line represents a different rheological parameter from the constitutive model.
+    Eight parameters show strong convergence to $R^2 > 0.85$ by n=75, while two parameters ($\mu_0 and \mu_R$) demonstrate persistent
+    poor performance across all sample sizes, suggesting fundamental challenges in their prediction from standard physiological variables.}
+    \label{fig:s5012}
+\end{figure}
+
+Some of the predicted values never reached a positive $R^2_{CV}$ value (Figure \ref{tab:noSyn}). While the majority of parameters can be successfully
+predicted from physiological data once adequate sample sizes are achieved,
+the two problematic parameters may require alternative measurement approaches or the inclusion of additional biomarkers not typically
+assessed in standard blood panels. Future studies should consider incorporating more specialized measurements, such as detailed protein
+profiling or cellular morphology assessments, to improve prediction of these challenging rheological parameters.
+
+\begin{table}[ht]
+    \centering
+    \caption{Rheological Parameter that never reached a positive $R^2_{CV}$}
+    \begin{tabular}{l}
+        Rheological Parameter\\
+        \hline
+        $\mu_0$\\
+        $\mu_R$
+    \end{tabular}
+    \label{tab:noSyn}
+\end{table}
 
 
 

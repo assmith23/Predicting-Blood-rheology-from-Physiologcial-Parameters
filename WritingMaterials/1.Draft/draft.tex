@@ -370,11 +370,20 @@ Further investigation in specific variables may have more influence than the sel
 \end{figure}
 
 \subsection{Synthetic Data}
-Since the data set size is low and provided poor performance as address in the previous section, synthetic data generation is used to address test the model with larger data set sizes. More details.. (not a precise value but provides a range/ballpark, results should not but used as true corrleations but used to suggest a possible dataset size, the testing testing is what was used for the results).....
+Since the original dataset size was limited and provided poor performance,
+synthetic data generation was used to test model performance with larger dataset sizes.
+Cross-validation performance ($R^2$) of machine learning models was evaluated for predicting rheological
+parameters as a function of synthetic dataset size.
 
-Cross-validation performance ($R^2$) of machine learning models predicting rheological parameters as a function of synthetic dataset size. Each line represents a different rheological parameter from the constitutive model. Eight parameters show strong convergence to $R^2 > 0.85$ by n=75, while two parameters ($\mu_0$ and $\mu_R$) demonstrate persistent poor performance across all sample sizes, suggesting fundamental challenges in their prediction from standard physiological variables.
+Eight parameters show strong convergence to $R^2 > 0.85$ by n=75, while two parameters ($\mu_0$ and $\mu_R$)
+demonstrate persistent poor performance across all sample sizes,
+suggesting fundamental challenges in their prediction from standard physiological variables.
 
-The analysis identifies an $n\approx 75$ as a sufficenit data set size to caputure the variability in these data (Figure \ref{fig:s5012}). There are diminishing returns in model performance after this critical threashold. Beyond $n\approx 75$, most well-performing parameters show only marginal improvements, indicating that the models have effectively learned the underlying relationships between physiological variables and rheological behavior. 
+The analysis identifies an $n\approx 75$ as a sufficenit data set size to caputure the variability
+in these data (Figure \ref{fig:s5012}). There are diminishing returns in model performance after this
+critical threashold. Beyond $n\approx 75$, most well-performing parameters show only marginal improvements,
+indicating that the models have effectively learned the underlying relationships between physiological variables
+and rheological behavior.
 
 \begin{figure}[ht]
     \centering
@@ -383,15 +392,8 @@ The analysis identifies an $n\approx 75$ as a sufficenit data set size to caputu
     \label{fig:s5012}
 \end{figure}
 
-Topic/Thought paragraph then provide details....
-Most parameters are successfully predicted from physiological data with adequate sample sizes, but some parameters did not.
-
-reach a positive $R^2_{CV}$ 
-
 Some of the predicted values never reached a positive $R^2_{CV}$ value (Figure \ref{tab:noSyn}).  Future studies should consider incorporating more specialized measurements, such as detailed protein
 profiling or cellular morphology assessments, to improve prediction of these challenging rheological parameters.
-
-This finding provides crucial guidance forfuture experimental design, suggesting that studies requiring similar predictive accuracy should target sample sizes in the $75- 100$ range.
 
 \begin{table}[ht]
     \centering
@@ -405,16 +407,10 @@ This finding provides crucial guidance forfuture experimental design, suggesting
     \label{tab:noSyn}
 \end{table}
 
-
-
-
-
-
-
-
-
-
-
+This finding provides crucial guidance for future experimental design, suggesting that studies requiring similar predictive
+accuracy should target sample sizes in the 75-100 range. These results should not be used to make assumptions about true
+associations between physiological and rheological parameters, but rather to understand the necessary sample size for future
+investigations.
 
 % Discussion
 \newpage

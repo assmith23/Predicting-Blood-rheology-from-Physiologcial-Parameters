@@ -1,6 +1,7 @@
-# Transient Blood Rheology
-## UD Summer Experience
+# Predicting Blood Rheology from Physioligcal Parameters
+## A Machine Learning Approach to Correlating Physiological Parameters with Rheological Features
+### 07-August-2025
 
 **Abstract**
 
-Machine learning research to explore the correlations between a standard Physiological Blood Panel and 10 different Rheology Parameters. The goal is to simplify the process of understand blood rheology for clinical diagnostic purposes.
+This study tested whether routine physiological blood panel measurements could predict complex rheological parameters from the tensorial-Enhanced Structural Stress Thixotropic Viscoelastic (t-ESSTV) constitutive model through machine learning approaches. A dataset of $n=22$ healthy donors with comprehensive physiological measurements and corresponding t-ESSTV parameters was analyzed using Principal Component Analysis and Gaussian Process Regression. PCs of 12 physiological variables revealed three primary components explaining $67\%$ of variance: blood oxygen-carrying capacity, lipid metabolism, and coagulation factors. However, correlation analysis showed only weak relationships between principal components and rheological parameters (strongest $r=0.478$), and GPR models failed to achieve positive cross-validation $R^2$ scores for any rheological target. Synthetic data analysis indicated that approximately $75$ donors would be required for meaningful predictions, while some rheological parameters remained unpredictable across all sample sizes. Although the primary hypothesis was rejected, this work establishes methodological foundations for future investigations and demonstrates fundamental challenges in connecting standard blood panels to complex constitutive model parameters, suggesting that clinical implementation of sophisticated rheological models may require alternative approaches.
